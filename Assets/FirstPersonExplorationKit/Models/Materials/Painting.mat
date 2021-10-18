@@ -111,8 +111,19 @@ Material:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+<<<<<<< Updated upstream
   m_BuildTextureStacks: []
 --- !u!114 &4930144271506682110
+=======
+<<<<<<< Updated upstream
+=======
+  m_BuildTextureStacks: []
+<<<<<<< HEAD
+--- !u!114 &4930144271506682110
+=======
+--- !u!114 &8850212776176408326
+>>>>>>> Development
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,3 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 4
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

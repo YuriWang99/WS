@@ -106,8 +106,19 @@ Material:
     - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< Updated upstream
   m_BuildTextureStacks: []
 --- !u!114 &4393446693055388176
+=======
+<<<<<<< Updated upstream
+=======
+  m_BuildTextureStacks: []
+<<<<<<< HEAD
+--- !u!114 &4393446693055388176
+=======
+--- !u!114 &1180238124936296047
+>>>>>>> Development
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,3 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 4
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
