@@ -11,7 +11,7 @@ public class SubTitleSystem : MonoBehaviour
     public Text SubTitle;
     void Start()
     {
-        StartCoroutine(ElevatorSubtitle());
+        //StartCoroutine(ElevatorSubtitle());
         Ele_Door_Trigger.SetActive(false);
     }
 
@@ -41,8 +41,8 @@ public class SubTitleSystem : MonoBehaviour
         SubTitle.text = "我为什么在这里";
 
         Ele_Door_Trigger.SetActive(true);
+        
         // end subtitle
-        yield return new WaitForSeconds(3);
         SubTitle.color = Color.white;
         SubTitle.text = "";
 
@@ -65,13 +65,10 @@ public class SubTitleSystem : MonoBehaviour
         yield return new WaitForSeconds(3);
         SubTitle.text = "对哦，我的校园卡还在审核中，没有批下来";
 
-        SubTitle.color = Color.white;
         yield return new WaitForSeconds(3);
         SubTitle.text = "我为什么在这里";
 
-        Ele_Door_Trigger.SetActive(true);
         // end subtitle
-        yield return new WaitForSeconds(3);
         SubTitle.color = Color.white;
         SubTitle.text = "";
 
