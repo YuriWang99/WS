@@ -142,3 +142,4 @@ Material:
     - _ProjectedShadowColor: {r: 0.4528302, g: 0.42296267, b: 0.044855822, a: 1}
     - _RimColor: {r: 0.14566667, g: 0.184, b: 0.09008333, a: 1}
     - _SelfShadowColor: {r: 0.41568628, g: 0.43137255, b: 0.36078432, a: 1}
+  m_BuildTextureStacks: []
