@@ -200,7 +200,7 @@ MonoBehaviour:
   m_WalkSpeedCrouching: 2
   m_RunSpeedCrouching: 4
   m_WalkSpeedStanding: 4
-  m_RunSpeedStanding: 10
+  m_RunSpeedStanding: 6
   walkStepLengthCrouching: 3.5
   runStepLengthCrouching: 3
   walkStepLengthStanding: 1
@@ -357,7 +357,7 @@ Camera:
     height: 1
   near clip plane: 0.25
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1144,7 +1144,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 100
   m_Depth: 1

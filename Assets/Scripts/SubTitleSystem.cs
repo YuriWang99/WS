@@ -18,6 +18,7 @@ public class SubTitleSystem : MonoBehaviour
     public GameObject PosterLights;
     public GameObject GateLight;
     public GameObject BathroomLight;
+    public GameObject AreaLights;
     public GameObject Deer;
 
     void Start()
@@ -38,24 +39,34 @@ public class SubTitleSystem : MonoBehaviour
         SubTitle.color = Color.yellow;
         yield return new WaitForSeconds(2);
         Ele_Door_Light.SetActive(true);
-        yield return new WaitForSeconds(3);
-        SubTitle.text = "hey cheer up， 今天是上学的第一天";
-        yield return new WaitForSeconds(3);
-        SubTitle.text = "当时的我一个人从中国来到纽约 hey 我居然把这个记录了下来";
-        yield return new WaitForSeconds(3);
-        SubTitle.text = "oh，shit，第一天的orientation就迟到，希望没有错过什么东西";
-        //dear
-        yield return new WaitForSeconds(3);
-        SubTitle.color = Color.green;
-        SubTitle.text = "今天是上课第一天，luke不希望自己迟到";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "This is the story of a game center student.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "He got his graduate degree here, he studied game design.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "because he loved games since he was a kid,";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "so he contributed everything he had to games,";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "now he has graduated three years ago, he is sitting on his game project,";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "he is very happy every day because he has his own game with him all the time.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "But today, for some reason, when he woke up,";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "he was already in the elevator of the game center.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "He knew this elevator where he used for two years.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "But he didn't know why he suddenly appeared in this elevator.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "He didn't know how to get out of this elevator next.";
 
-        SubTitle.color = Color.yellow;
-        yield return new WaitForSeconds(3);
-        SubTitle.text = "我为什么在这里";
-
+        //Elevator Audio
         Ele_Door_Trigger.SetActive(true);
-        
+
         // end subtitle
+        yield return new WaitForSeconds(2);
         SubTitle.color = Color.yellow;
         SubTitle.text = "";
 
@@ -71,33 +82,119 @@ public class SubTitleSystem : MonoBehaviour
         //PosterLights.SetActive(true);
         
         SubTitle.color = Color.yellow;
-        yield return new WaitForSeconds(1);
-        SubTitle.text = "Luke这是第一天来到Game Center university， 他感觉到了非常的紧张 这是一个mfa项目";
         yield return new WaitForSeconds(2);
-        SubTitle.text = "很多的独立游戏开发者聚到了一起，是一个非常令人兴奋的消息";
+        SubTitle.text = "Having graduated three years ago, he somehow came here again, and strangely enough, ";
         yield return new WaitForSeconds(2);
-        SubTitle.text = "我到底是谁，我的名字是什么";
+        SubTitle.text = "the gate was also tightly closed, and there was no way to get in anyway,as if he was isolated from the world.";
         yield return new WaitForSeconds(2);
+        SubTitle.text = "This place now looks no different from when he left, but now it seems like there is no one here even though the place is lit up.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "In fact, he doesn't even know what his name is";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "Walk to the table in front of the door, there is a piece of paper with a deer drawn on it, looks a little familiar, but how can not remember what it is.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "In fact, he doesn't even know what his name is.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "Walk to the table in front of the door, there is a piece of paper with a deer drawn on it,";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "looks a little familiar, but how can not remember what it is.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "It turns out that the ID card is missing, and at least now luke knows his name is luke.";
         GateLight.SetActive(true);
-        SubTitle.text = "对哦，我的校园卡还在审核中，没有批下来";
 
+        //Deer.SetActive(true);
+
+        //End subtitle
         yield return new WaitForSeconds(2);
-        SubTitle.text = "我为什么在这里";
-
-        Deer.SetActive(true);
-
-        // end subtitle
         SubTitle.color = Color.yellow;
         SubTitle.text = "";
 
     }
+    public void StartPart3()
+    {
+        StartCoroutine(Part3Subtitle());
+    }
+    IEnumerator Part3Subtitle()
+    {
+        SubTitle.color = Color.yellow;
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "But really come in, luke long-lost feel a trace of excitement and surprise,";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "he liked the past time to study here, and in reality he did not go back once,";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "at the moment a strange and familiar mixed feeling rushed to luke's heart.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "Into the school inside the luke found it really empty, he could only choose to look around, looking for clues to get out.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "It's the weekend, Luke has many questions,although there is no person here,but many students' work on the table.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "This feeling is very familiar, because Luke used to put his own work in the past just like this here.";
+
+        //End subtitle
+        yield return new WaitForSeconds(2);
+        SubTitle.color = Color.yellow;
+        SubTitle.text = "";
+    }
+    public void StartPart4()
+    {
+        StartCoroutine(Part4Subtitle());
+    }
+    IEnumerator Part4Subtitle()
+    {
+        //watched all the posters
+        SubTitle.color = Color.yellow;
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "It looks like these games are really well done, and luke feels like he couldn't have come up with such a great idea when he was in school.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "But where has everyone gone?";
+        yield return new WaitForSeconds(3);
+
+        //(but luke just ready to use the password to open the door when the very bright lounge suddenly lights all down,
+        //a moment later,
+        //the light behind it like the sun shone up, and luke where the darkness formed a clear contrast,
+        //all the tables and chairs all gone, the ground into the grass, a deer standing on the grass)
+
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "It's a deer.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "Yes, that's right. A gentle moose is standing not far away at the moment, without any expression or movement, and she can even see the grass by her feet, which just looks incredible.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "Luke stepped forward without any hesitation.";
+
+        //End subtitle
+        yield return new WaitForSeconds(2);
+        SubTitle.color = Color.yellow;
+        SubTitle.text = "";
+
+    }
+    IEnumerator TalkWithDeer()
+    {
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "deer, I'm glad you showed up.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "So it's the same old thing again, right, it's just a dream and I need to find something crucial in this dream to wake up, right?";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "It's really the same old plot, and going back to the place where you used to go to graduate school is not a fun dream.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "Her name is deer, and she is luke's best friend.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "Luke usually talks to deer about his troubles, and deer gives Luke positive guidance in a silent way. luke is very grateful for all this.";
+        yield return new WaitForSeconds(2);
+        SubTitle.text = "Although deer only appear in dreams.";
+        yield return new WaitForSeconds(2);
+        //End subtitle
+        yield return new WaitForSeconds(2);
+        SubTitle.color = Color.yellow;
+        SubTitle.text = "";
+    }
+
     public void StartPart2Deer()
     {
         StartCoroutine(Part2Deer());
     }
     IEnumerator Part2Deer()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0);
         SubTitle.text = "Go find the key in bathroom";
         BathroomLight.SetActive(true);
     }
@@ -109,6 +206,8 @@ public class SubTitleSystem : MonoBehaviour
     IEnumerator DesPart2Deer()
     {
         yield return new WaitForSeconds(0);
-        BathroomLight.SetActive(false);
+        Deer.SetActive(false);
+        PosterLights.SetActive(true);
+        AreaLights.SetActive(true);
     }
 }
