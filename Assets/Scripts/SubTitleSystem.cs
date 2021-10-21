@@ -21,6 +21,7 @@ public class SubTitleSystem : MonoBehaviour
     public GameObject AreaLights;
     public GameObject Deer;
     [Header("Part4")]
+    public GameObject GrassDeer;
     public GameObject Audio626;
     public GameObject Furnicture;
 
@@ -157,7 +158,7 @@ public class SubTitleSystem : MonoBehaviour
         //the light behind it like the sun shone up, and luke where the darkness formed a clear contrast,
         //all the tables and chairs all gone, the ground into the grass, a deer standing on the grass)
         Furnicture.SetActive(false);
-
+        GrassDeer.SetActive(true);
         yield return new WaitForSeconds(2);
         SubTitle.text = "It's a deer.";
         yield return new WaitForSeconds(2);
@@ -170,6 +171,10 @@ public class SubTitleSystem : MonoBehaviour
         SubTitle.color = Color.yellow;
         SubTitle.text = "";
 
+    }
+    public void StartTalkWithDeer()
+    {
+        StartCoroutine(TalkWithDeer());
     }
     IEnumerator TalkWithDeer()
     {
