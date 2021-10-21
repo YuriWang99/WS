@@ -20,6 +20,9 @@ public class SubTitleSystem : MonoBehaviour
     public GameObject BathroomLight;
     public GameObject AreaLights;
     public GameObject Deer;
+    [Header("Part4")]
+    public GameObject Audio626;
+    public GameObject Furnicture;
 
     void Start()
     {
@@ -148,11 +151,12 @@ public class SubTitleSystem : MonoBehaviour
         yield return new WaitForSeconds(2);
         SubTitle.text = "But where has everyone gone?";
         yield return new WaitForSeconds(3);
-
+        Audio626.SetActive(true);
         //(but luke just ready to use the password to open the door when the very bright lounge suddenly lights all down,
         //a moment later,
         //the light behind it like the sun shone up, and luke where the darkness formed a clear contrast,
         //all the tables and chairs all gone, the ground into the grass, a deer standing on the grass)
+        Furnicture.SetActive(false);
 
         yield return new WaitForSeconds(2);
         SubTitle.text = "It's a deer.";
