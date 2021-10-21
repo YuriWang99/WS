@@ -181,8 +181,8 @@ public class SubTitleSystem : MonoBehaviour
         //a moment later,
         //the light behind it like the sun shone up, and luke where the darkness formed a clear contrast,
         //all the tables and chairs all gone, the ground into the grass, a deer standing on the grass)
-        Furnicture.SetActive(false);
-        GrassDeer.SetActive(true);
+        //Furnicture.SetActive(false);
+        //GrassDeer.SetActive(true);
         yield return new WaitForSeconds(4);
         SubTitle.text = "It's a deer.";
         yield return new WaitForSeconds(4);
