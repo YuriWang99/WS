@@ -1,0 +1,111 @@
+# Blender MTL File: 'Elevator.blend'
+# Material Count: 9
+
+newmtl Material.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Terrazzo_002\\Terrazzo_002_SD\\Terrazzo_002_normal.jpg
+map_Kd -s 3.000000 3.000000 3.000000 D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Terrazzo_002\\Terrazzo_002_SD\\PolkaDot.png
+map_Ns D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Terrazzo_002\\Terrazzo_002_SD\\Terrazzo_002_roughness.jpg
+
+newmtl Material.003
+Ns 743.801648
+Ka 0.481818 0.481818 0.481818
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Metal_Grill
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_Grill_004\\Metal_Grill_004_SD\\Metal_Grill_004_normal.jpg
+map_Ns D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_Grill_004\\Metal_Grill_004_SD\\Metal_Grill_004_roughness.jpg
+refl D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_Grill_004\\Metal_Grill_004_SD\\Metal_Grill_004_ambientOcclusion.jpg
+
+newmtl Metal_Red
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.336044 0.018679 0.006349
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_normal.jpg
+map_Ns D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_roughness.jpg
+refl D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_ambientOcclusion.jpg
+
+newmtl Metal_Silver
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_normal.jpg
+map_Ns D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_roughness.jpg
+refl D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_ambientOcclusion.jpg
+
+newmtl Metal_SilverDark
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.495069 0.495069 0.495069
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_normal.jpg
+map_Ns D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_roughness.jpg
+refl D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_ambientOcclusion.jpg
+
+newmtl Metal_White
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_normal.jpg
+map_Ns D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_roughness.jpg
+refl D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_ambientOcclusion.jpg
+
+newmtl Metal_Yellow
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.624401 0.046600
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_normal.jpg
+map_Ns D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_roughness.jpg
+refl D:\\NYU\\Unity_Projects\\WS\\Assets\\Materials\\Textures\\Metal\\Metal_scratched_008_SD\\Metal_scratched_008_ambientOcclusion.jpg
+
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
