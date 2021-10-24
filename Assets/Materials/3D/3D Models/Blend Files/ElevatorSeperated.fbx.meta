@@ -3,7 +3,52 @@ guid: 08e6bf31c96614b44ba8fe33983127fb
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 6b8f1cba18b2af349bf9456aeb904198, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: d1b83a3e8e3528544a2e3385aa8f0f1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: a858970c058ec0b49a1a5d70a5daec81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Grill
+    second: {fileID: 2100000, guid: 8f1016da3dc06954497bfd59f857ef4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Red
+    second: {fileID: 2100000, guid: 5dc880fed4c823748885b8e6c4b475df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Silver
+    second: {fileID: 2100000, guid: b6eb44de0856e084c9cbd5b0a2768f59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_SilverDark
+    second: {fileID: 2100000, guid: a7cae368892bc6041881ce125fad0898, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_White
+    second: {fileID: 2100000, guid: 59c4e064cf1eaaa41860e6d63e8fcccf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Yellow
+    second: {fileID: 2100000, guid: b41e5f2d4de8b564fa58b8bb8de82202, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
