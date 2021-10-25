@@ -11,7 +11,7 @@ public class SubTitleSystem : MonoBehaviour
     //Part1
     [Header("General")]
     public TMP_Text SubTitle;
-    public AudioSource BGM;
+    //public AudioSource BGM;
     [Header("Part1")]
     public GameObject Ele_Door_Light;
     public GameObject Ele_Door_Trigger;
@@ -19,13 +19,13 @@ public class SubTitleSystem : MonoBehaviour
     public AudioSource ElevatorOpen;
     int CurrentFloor = 0;
     [Header("Part2")]
-    public GameObject PosterLights;
-    public GameObject GateLight;
-    public GameObject BathroomLight;
-    public GameObject AreaLights;
-    public GameObject Deer;
+    //public GameObject PosterLights;
+    //public GameObject GateLight;
+    //public GameObject BathroomLight;
+    //public GameObject AreaLights;
+    //public GameObject Deer;
     [Header("Part4")]
-    public GameObject GrassDeer;
+    //public GameObject GrassDeer;
     //public GameObject Audio626;
     public GameObject Furnicture;
 
@@ -57,7 +57,7 @@ public class SubTitleSystem : MonoBehaviour
     IEnumerator ElevatorPart1Subtitle()
     {
         //Talking in elevator
-        BGM.Play();
+        //BGM.Play();
         SubTitle.color = Color.yellow;
         yield return new WaitForSeconds(2);
         Ele_Door_Light.SetActive(true);
@@ -127,7 +127,7 @@ public class SubTitleSystem : MonoBehaviour
         SubTitle.text = "looks a little familiar, but how can not remember what it is.";
         yield return new WaitForSeconds(2);
         SubTitle.text = "It turns out that the ID card is missing, and at least now luke knows his name is luke.";
-        GateLight.SetActive(true);
+        //GateLight.SetActive(true);
 
         //Deer.SetActive(true);
 
@@ -229,7 +229,7 @@ public class SubTitleSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(0);
         SubTitle.text = "Go find the key in bathroom";
-        BathroomLight.SetActive(true);
+        //BathroomLight.SetActive(true);
     }
 
     public void DestroyPart2Deer()
@@ -239,8 +239,8 @@ public class SubTitleSystem : MonoBehaviour
     IEnumerator DesPart2Deer()
     {
         yield return new WaitForSeconds(0);
-        Deer.SetActive(false);
-        PosterLights.SetActive(true);
-        AreaLights.SetActive(true);
+        //Deer.SetActive(false);
+        //PosterLights.SetActive(true);
+        //AreaLights.SetActive(true);
     }
 }

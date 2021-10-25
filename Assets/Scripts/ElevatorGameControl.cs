@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Whilefun.FPEKit;
 
 public class ElevatorGameControl : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class ElevatorGameControl : MonoBehaviour
     public List<int> InputSequence;
 
     public GameObject YellowLight, GreenLight, RedLight, Light;
+
+    public GameObject GCGate1, GCGate2;
 
     void Start()
     {
@@ -47,18 +50,17 @@ public class ElevatorGameControl : MonoBehaviour
                             //reset
                             SequenceIndex = 2;
 
-                            Invoke("Demo1", 3f);
+                            //Invoke("Demo1", 3f);
 
-                            GreenLight.SetActive(false);
-                            YellowLight.SetActive(true);
+                            Invoke("LightSequence1", 3f);
 
-                            Invoke("Demo2", 10f);
+                            Invoke("Demo2", 8f);
 
                         }
                         else
                         {
                             ClearSequence();
-                            Invoke("Demo1", 3f);
+                            Invoke("Demo1", 2f);
                         }
                     }
                 }
@@ -75,16 +77,16 @@ public class ElevatorGameControl : MonoBehaviour
                             //reset
                             SequenceIndex = 3;
 
-                            Invoke("Demo2", 3f);
+                            //Invoke("Demo2", 3f);
 
-                            YellowLight.SetActive(false);
-                            RedLight.SetActive(true);
+                            Invoke("LightSequence2", 3f);
 
-                            Invoke("Demo3", 10f);
+
+                            Invoke("Demo3", 8f);
                         }
                         else
                         {
-                            Invoke("Demo2", 5f);
+                            Invoke("Demo2", 2f);
                             Debug.Log("Sequence2 false");
                             ClearSequence();
                         }
@@ -98,20 +100,21 @@ public class ElevatorGameControl : MonoBehaviour
                             && InputSequence[2] == Sequence3[2] && InputSequence[3] == Sequence3[3]
                             && InputSequence[4] == Sequence3[4])
                         {
-                            Invoke("Demo3", 3f);
+                            //Invoke("Demo3", 3f);
 
-                            RedLight.SetActive(false);
-                            Light.SetActive(true);
+                            Invoke("LightSequence3", 3f);
 
                             ClearSequence();
                             Debug.Log("Sequence3 finished");
                             SequenceIndex = 4;
+                            //Open the Gate
+                            OpenGCGate();
                             GameStart = false;
                             //reset
                         }
                         else
                         {
-                            Invoke("Demo3", 5f);
+                            Invoke("Demo3", 2f);
                             Debug.Log("Sequence3 false");
                             ClearSequence();
                         }
@@ -205,6 +208,26 @@ public class ElevatorGameControl : MonoBehaviour
 
     }
 
+    public void LightSequence1()
+    {
+        GreenLight.SetActive(false);
+        YellowLight.SetActive(true);
+    }
+    public void LightSequence2()
+    {
+        YellowLight.SetActive(false);
+        RedLight.SetActive(true);
+    }
+    public void LightSequence3()
+    {
+        RedLight.SetActive(false);
+        Light.SetActive(true);
+    }
+    public void OpenGCGate()
+    {
+        GCGate1.GetComponent<FPEAlwaysSwingOutDoor>().activateDoor();
+        GCGate2.GetComponent<FPEAlwaysSwingOutDoor>().activateDoor();
 
+    }
 } 
 

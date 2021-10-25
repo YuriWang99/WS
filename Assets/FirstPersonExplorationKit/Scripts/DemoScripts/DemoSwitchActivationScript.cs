@@ -79,7 +79,7 @@ public class DemoSwitchActivationScript : FPEInteractableActivateScript {
 			base.interact();
 
 			buttonActionInProgress = true;
-			childSwitch.GetComponent<Animation>()["SwitchTop|PushButton"].speed = 1.5f;
+			childSwitch.GetComponent<Animation>()["SwitchTop|PushButton"].speed = 2f;
 			childSwitch.GetComponent<Animation>().Play("SwitchTop|PushButton");
 
 			demoSwitchLightBulb.GetComponent<Renderer>().material = lightOnMaterial;

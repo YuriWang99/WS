@@ -11,7 +11,7 @@ public class NotifationLightControl : MonoBehaviour
     public GameObject Door1;
     public GameObject Door2;
     public AudioSource ElevatorAudio;
-    public bool KeepOpen = false;
+    //public bool KeepOpen = false;
     void Start()
     {
         
@@ -58,7 +58,7 @@ public class NotifationLightControl : MonoBehaviour
         Door2.GetComponent<FPESlidingDoor>().RemotelyCloseDoor();
         NotifationLight.SetActive(false);
         //reset
-        KeepOpen = false;
+        //KeepOpen = false;
     }
     public void PlayDemo()
     {

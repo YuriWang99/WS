@@ -38,7 +38,7 @@ public class DemoCutscene : MonoBehaviour {
             cutsceneHasPlayed = true;
 
             // This is the core of the cinematic. We want to look at the stage for 2 seconds, at default movement speed, and wait 0.25 seconds before moving the camera
-            myForcedLookTarget.forceLookAt(2.0f, 5.0f, 0.25f);
+            myForcedLookTarget.forceLookAt(15.0f, 5.0f, 0.25f);
 
         }
 

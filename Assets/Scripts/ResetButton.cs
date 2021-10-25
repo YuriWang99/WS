@@ -8,6 +8,7 @@ public class ResetButton : MonoBehaviour
     // Start is called before the first frame update
     public GameObject CuratinA, CuratinB, CuratinC, CuratinD, CuratinE;
     public List<string> InputButton;
+    public GameObject DoorE;
     void Start()
     {
         
@@ -20,10 +21,11 @@ public class ResetButton : MonoBehaviour
         {
             if(InputButton[0]=="Button3"|| InputButton[0] == "Button1")
             {
-                if (InputButton[0] == "Button3" || InputButton[0] == "Button1")
+                if (InputButton[1] == "Button3" || InputButton[1] == "Button1")
                 {
                     //Win
                     CuratinE.GetComponent<FPESlidingDoor>().RemotelyOpenDoor();
+                    DoorE.GetComponent<FPEAlwaysSwingOutDoor>().activateDoor();
                 }
             }
         }
@@ -60,7 +62,6 @@ public class ResetButton : MonoBehaviour
         CuratinB.GetComponent<FPESlidingDoor>().RemotelyCloseDoor();
         CuratinC.GetComponent<FPESlidingDoor>().RemotelyOpenDoor();
         CuratinD.GetComponent<FPESlidingDoor>().RemotelyOpenDoor();
-        CuratinE.GetComponent<FPESlidingDoor>().RemotelyOpenDoor();
         InputButton.Clear();
     }
 
