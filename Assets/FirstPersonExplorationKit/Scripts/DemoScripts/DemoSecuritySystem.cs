@@ -19,7 +19,7 @@ public class DemoSecuritySystem : MonoBehaviour
     [SerializeField, Tooltip("The door(s) the security system will lock or unlock")]
     private FPEDoor[] doorsToControl = null;
     [SerializeField, Tooltip("The code required to open the door (e.g. 0451)")]
-    private int[] doorCode = { 0, 4, 5, 1 };
+    private int[] doorCode = { 2, 8, 4, 5 };
     [SerializeField, Tooltip("Sound that plays when correct code is entered")]
     private AudioClip correctCodeSound = null;
     [SerializeField, Tooltip("Sound that plays when incorrect code is entered")]
