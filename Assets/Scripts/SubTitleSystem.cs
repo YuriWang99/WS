@@ -28,6 +28,26 @@ public class SubTitleSystem : MonoBehaviour
     //public GameObject GrassDeer;
     //public GameObject Audio626;
     public GameObject Furnicture;
+    [Header("Text file")]
+    public TextAsset textFile;
+    public int index;
+
+    public float textSpeed;
+    bool textFinished;
+    bool startSubtotle;
+
+    List<string> textList = new List<string>();
+    void Awake()
+    {
+        GetTextFromFile(textFile);
+        index = 0;
+    }
+    private void OnEnable()
+    {
+        /*textLabel.text = textList[index];
+        index++;*/
+        textFinished = true;
+    }
 
     void Start()
     {
@@ -49,9 +69,29 @@ public class SubTitleSystem : MonoBehaviour
                 Floors[i].SetActive(false);
             }
         }
+        if(startSubtotle)
+        {
+            //Counter
+            if (index == textList.Count)
+            {
+                //gameObject.SetActive(false);
+                index = 0;
+                startSubtotle = false;
+                return;
+            }
+            if (textFinished)
+            {
+                /*textLabel.text = textList[index];
+                index++;*/
+                StartCoroutine(SetTextUI());
+            }
+        }
+
+
     }
     public void StartPart1()
     {
+        startSubtotle = true;
         StartCoroutine(ElevatorPart1Subtitle());
     }
     IEnumerator ElevatorPart1Subtitle()
@@ -62,32 +102,32 @@ public class SubTitleSystem : MonoBehaviour
         yield return new WaitForSeconds(2);
         Ele_Door_Light.SetActive(true);
         yield return new WaitForSeconds(2);
-        SubTitle.text = "This is the story of a game center student.";
+        //SubTitle.text = "This is the story of a game center student.";
         CurrentFloor = 1;
         yield return new WaitForSeconds(4);
-        SubTitle.text = "He got his graduate degree here, he studied game design.";
+        //SubTitle.text = "He got his graduate degree here, he studied game design.";
         yield return new WaitForSeconds(4);
-        SubTitle.text = "because he loved games since he was a kid,";
+        //SubTitle.text = "because he loved games since he was a kid,";
         CurrentFloor = 2;
         yield return new WaitForSeconds(4);
-        SubTitle.text = "so he contributed everything he had to games,";
+        //SubTitle.text = "so he contributed everything he had to games,";
         yield return new WaitForSeconds(4);
-        SubTitle.text = "now he has graduated three years ago, he is sitting on his game project,";
+        //SubTitle.text = "now he has graduated three years ago, he is sitting on his game project,";
         CurrentFloor = 3;
         yield return new WaitForSeconds(4);
-        SubTitle.text = "he is very happy every day because he has his own game with him all the time.";
+        //SubTitle.text = "he is very happy every day because he has his own game with him all the time.";
         
         yield return new WaitForSeconds(4);
-        SubTitle.text = "But today, for some reason, when he woke up,";
+        //SubTitle.text = "But today, for some reason, when he woke up,";
         CurrentFloor = 4;
+        //yield return new WaitForSeconds(4);
+        //SubTitle.text = "he was already in the elevator of the game center.";
+        //yield return new WaitForSeconds(4);
+        //SubTitle.text = "He knew this elevator where he used for two years.";
         yield return new WaitForSeconds(4);
-        SubTitle.text = "he was already in the elevator of the game center.";
+        //SubTitle.text = "But he didn't know why he suddenly appeared in this elevator.";
         yield return new WaitForSeconds(4);
-        SubTitle.text = "He knew this elevator where he used for two years.";
-        yield return new WaitForSeconds(4);
-        SubTitle.text = "But he didn't know why he suddenly appeared in this elevator.";
-        yield return new WaitForSeconds(4);
-        SubTitle.text = "He didn't know how to get out of this elevator next.";
+        //SubTitle.text = "He didn't know how to get out of this elevator next.";
         CurrentFloor = 5;
         ElevatorOpen.Play();
 
@@ -242,5 +282,36 @@ public class SubTitleSystem : MonoBehaviour
         //Deer.SetActive(false);
         //PosterLights.SetActive(true);
         //AreaLights.SetActive(true);
+    }
+
+    void GetTextFromFile(TextAsset file)
+    {
+        textList.Clear();
+        index = 0;
+
+        var linData = file.text.Split('\n');
+
+        foreach (var line in linData)
+        {
+            textList.Add(line);
+        }
+    }
+    IEnumerator SetTextUI()
+    {
+       
+        textFinished = false;
+        SubTitle.text = "";
+        for (int i = 0; i < textList[index].Length; i++)
+        {
+            SubTitle.text += textList[index][i];
+            yield return new WaitForSeconds(textSpeed);
+            if(i== textList[index].Length-1)
+            {
+                yield return new WaitForSeconds(2);
+            }
+        }
+        textFinished = true;
+        //yield return new WaitForSeconds(4);
+        index++;
     }
 }
