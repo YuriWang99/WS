@@ -1,0 +1,3 @@
+Whew! It's finally solved! So now the door is unlocked?
+However, from the game design point of view, the puzzle is really not particularly mature, 
+adding some necessary hints will be better.

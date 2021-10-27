@@ -11,7 +11,8 @@ public class SubTitleSystem : MonoBehaviour
     //Part1
     [Header("General")]
     public TMP_Text SubTitle;
-    //public AudioSource BGM;
+    public AudioSource BGM;
+    public AudioSource PipeBGM;
     [Header("Part1")]
     public GameObject Ele_Door_Light;
     public GameObject Ele_Door_Trigger;
@@ -29,7 +30,8 @@ public class SubTitleSystem : MonoBehaviour
     //public GameObject Audio626;
     public GameObject Furnicture;
     [Header("Text file")]
-    public TextAsset textFile;
+    public TextAsset Part1;
+    
     public int index;
 
     public float textSpeed;
@@ -37,9 +39,13 @@ public class SubTitleSystem : MonoBehaviour
     bool startSubtotle;
 
     List<string> textList = new List<string>();
+
+    [Header("Text gameobjects")]
+    public GameObject Part2;
     void Awake()
     {
-        GetTextFromFile(textFile);
+        BGM.Play();
+        GetTextFromFile(Part1);
         index = 0;
     }
     private void OnEnable()
@@ -102,30 +108,17 @@ public class SubTitleSystem : MonoBehaviour
         yield return new WaitForSeconds(2);
         Ele_Door_Light.SetActive(true);
         yield return new WaitForSeconds(2);
-        //SubTitle.text = "This is the story of a game center student.";
         CurrentFloor = 1;
         yield return new WaitForSeconds(4);
-        //SubTitle.text = "He got his graduate degree here, he studied game design.";
         yield return new WaitForSeconds(4);
-        //SubTitle.text = "because he loved games since he was a kid,";
         CurrentFloor = 2;
         yield return new WaitForSeconds(4);
-        //SubTitle.text = "so he contributed everything he had to games,";
         yield return new WaitForSeconds(4);
-        //SubTitle.text = "now he has graduated three years ago, he is sitting on his game project,";
         CurrentFloor = 3;
+        yield return new WaitForSeconds(4); 
         yield return new WaitForSeconds(4);
-        //SubTitle.text = "he is very happy every day because he has his own game with him all the time.";
-        
-        yield return new WaitForSeconds(4);
-        //SubTitle.text = "But today, for some reason, when he woke up,";
         CurrentFloor = 4;
-        //yield return new WaitForSeconds(4);
-        //SubTitle.text = "he was already in the elevator of the game center.";
-        //yield return new WaitForSeconds(4);
-        //SubTitle.text = "He knew this elevator where he used for two years.";
         yield return new WaitForSeconds(4);
-        //SubTitle.text = "But he didn't know why he suddenly appeared in this elevator.";
         yield return new WaitForSeconds(4);
         //SubTitle.text = "He didn't know how to get out of this elevator next.";
         CurrentFloor = 5;
@@ -143,38 +136,16 @@ public class SubTitleSystem : MonoBehaviour
 
     public void StartPart2()
     {
-        StartCoroutine(Part2Subtitle());
+        if(!Part2.activeSelf)
+        {
+            Part2.SetActive(true);
+        }
+        //StartCoroutine(Part2Subtitle());
     }
     IEnumerator Part2Subtitle()
     {
-        //Talking in elevator
-        //PosterLights.SetActive(true);
-        
-        SubTitle.color = Color.yellow;
-        yield return new WaitForSeconds(4);
-        SubTitle.text = "Having graduated three years ago, he somehow came here again, and strangely enough, ";
-        yield return new WaitForSeconds(4);
-        SubTitle.text = "the gate was also tightly closed, and there was no way to get in anyway,as if he was isolated from the world.";
-        yield return new WaitForSeconds(4);
-        SubTitle.text = "This place now looks no different from when he left, but now it seems like there is no one here even though the place is lit up.";
-        yield return new WaitForSeconds(4);
-        SubTitle.text = "In fact, he doesn't even know what his name is";
-        yield return new WaitForSeconds(4);
-        SubTitle.text = "Walk to the table in front of the door, there is a piece of paper with a deer drawn on it, looks a little familiar, but how can not remember what it is.";
-        yield return new WaitForSeconds(4);
-        SubTitle.text = "In fact, he doesn't even know what his name is.";
-        yield return new WaitForSeconds(4);
-        SubTitle.text = "looks a little familiar, but how can not remember what it is.";
+        startSubtotle = true;
         yield return new WaitForSeconds(2);
-        SubTitle.text = "It turns out that the ID card is missing, and at least now luke knows his name is luke.";
-        //GateLight.SetActive(true);
-
-        //Deer.SetActive(true);
-
-        //End subtitle
-        yield return new WaitForSeconds(2);
-        SubTitle.color = Color.yellow;
-        SubTitle.text = "";
 
     }
     public void StartPart3()
@@ -313,5 +284,11 @@ public class SubTitleSystem : MonoBehaviour
         textFinished = true;
         //yield return new WaitForSeconds(4);
         index++;
+    }
+
+    public void SwitchBGM()
+    {
+        BGM.Stop();
+        PipeBGM.Play();
     }
 }

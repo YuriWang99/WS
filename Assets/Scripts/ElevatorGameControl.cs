@@ -24,6 +24,10 @@ public class ElevatorGameControl : MonoBehaviour
 
     public GameObject GCGate1, GCGate2;
 
+    [Header("Subtiles")]
+    public GameObject SolveSecondPuzzle, SolveWholePuzzle;
+
+
     void Start()
     {
         //Demo1();
@@ -60,7 +64,7 @@ public class ElevatorGameControl : MonoBehaviour
                         else
                         {
                             ClearSequence();
-                            Invoke("Demo1", 2f);
+                            Invoke("Demo1", 3f);
                         }
                     }
                 }
@@ -81,12 +85,12 @@ public class ElevatorGameControl : MonoBehaviour
 
                             Invoke("LightSequence2", 3f);
 
-
+                            SolveSecondPuzzle.SetActive(true);
                             Invoke("Demo3", 8f);
                         }
                         else
                         {
-                            Invoke("Demo2", 2f);
+                            Invoke("Demo2", 5f);
                             Debug.Log("Sequence2 false");
                             ClearSequence();
                         }
@@ -104,6 +108,7 @@ public class ElevatorGameControl : MonoBehaviour
 
                             Invoke("LightSequence3", 3f);
 
+                            SolveWholePuzzle.SetActive(true);
                             ClearSequence();
                             Debug.Log("Sequence3 finished");
                             SequenceIndex = 4;
@@ -114,7 +119,7 @@ public class ElevatorGameControl : MonoBehaviour
                         }
                         else
                         {
-                            Invoke("Demo3", 2f);
+                            Invoke("Demo3", 5f);
                             Debug.Log("Sequence3 false");
                             ClearSequence();
                         }

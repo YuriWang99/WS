@@ -68,7 +68,7 @@ public class NotifationLightControl : MonoBehaviour
     {
         ElevatorAudio.Play();
         NotifationLight.SetActive(true);      
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2.5f);
         NotifationLight.SetActive(false);
     }
 }

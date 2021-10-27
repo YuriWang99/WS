@@ -9,6 +9,8 @@ public class ResetButton : MonoBehaviour
     public GameObject CuratinA, CuratinB, CuratinC, CuratinD, CuratinE;
     public List<string> InputButton;
     public GameObject DoorE;
+    public GameObject SecretDoor;
+    public bool OpenDoor = true;
     void Start()
     {
         
@@ -25,7 +27,13 @@ public class ResetButton : MonoBehaviour
                 {
                     //Win
                     CuratinE.GetComponent<FPESlidingDoor>().RemotelyOpenDoor();
-                    DoorE.GetComponent<FPEAlwaysSwingOutDoor>().activateDoor();
+                    if (OpenDoor)
+                    {
+                        DoorE.GetComponent<FPEAlwaysSwingOutDoor>().activateDoor();
+                        SecretDoor.GetComponent<FPEAlwaysSwingOutDoor>().activateDoor();
+                        OpenDoor = false;
+                    }
+
                 }
             }
         }

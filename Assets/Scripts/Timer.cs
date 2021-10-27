@@ -14,6 +14,11 @@ public class Timer : MonoBehaviour
     public TMP_Text TimerTextPro;
 
     public bool inLibrary;
+    bool once = true;
+    public GameObject TenSecondsLeft;
+
+    public AudioSource Tenseconds;
+    public AudioSource Passward;
     void Start()
     {
         TimerTextPro.text = timeStart.ToString("00:00");
@@ -28,6 +33,20 @@ public class Timer : MonoBehaviour
             //720 24h ªªÀ„ 30s = 1h 30s = 60min 1s = 2 min
             timeStart -= Time.deltaTime;
             TimerTextPro.text = timeStart.ToString("00.00");// Timer font 00:00
+            if(timeStart<10&& once)
+            {
+                once = false;
+                TenSecondsLeft.SetActive(true);
+                Tenseconds.Play();
+            }
+
+            if(timeStart<0)
+            {
+                timeStart = 0;
+                TimerTextPro.text = "00.00";
+                inLibrary = false;
+                Passward.Play();
+            }
 
         }
 
