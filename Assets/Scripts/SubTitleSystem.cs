@@ -97,7 +97,7 @@ public class SubTitleSystem : MonoBehaviour
     }
     public void StartPart1()
     {
-        startSubtotle = true;
+        //startSubtotle = true;
         StartCoroutine(ElevatorPart1Subtitle());
     }
     IEnumerator ElevatorPart1Subtitle()
