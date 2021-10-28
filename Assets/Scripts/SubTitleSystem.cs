@@ -44,7 +44,7 @@ public class SubTitleSystem : MonoBehaviour
     public GameObject Part2;
     void Awake()
     {
-        BGM.Play();
+        
         GetTextFromFile(Part1);
         index = 0;
     }
@@ -57,6 +57,7 @@ public class SubTitleSystem : MonoBehaviour
 
     void Start()
     {
+        BGM.Play();
         //StartCoroutine(ElevatorSubtitle());
         Ele_Door_Trigger.SetActive(false);
     }

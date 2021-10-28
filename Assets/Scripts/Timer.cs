@@ -68,10 +68,9 @@ public class Timer : MonoBehaviour
 
     IEnumerator PlayText()
     {
-        yield return new WaitForSeconds(3f);
-        TimeUpText.SetActive(true);
-        yield return new WaitForSeconds(15f);
         play0();
+        yield return new WaitForSeconds(5f);
+        TimeUpText.SetActive(true);
     }
     void play30()
     {
