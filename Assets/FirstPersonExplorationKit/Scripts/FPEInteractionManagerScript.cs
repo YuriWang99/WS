@@ -1580,7 +1580,7 @@ namespace Whilefun.FPEKit
 
             if (interactableObject.gameObject.GetComponent<FPEAttachedNote>() && !interactableObject.gameObject.GetComponent<FPEAttachedNote>().Collected)
             {
-                showNotification("New note '" + interactableObject.gameObject.GetComponent<FPEAttachedNote>().NoteTitle + "' added");
+                showNotification(interactableObject.gameObject.GetComponent<FPEAttachedNote>().NoteTitle);
                 genericSFXPlayer.GetComponent<AudioSource>().PlayOneShot(noteAdded);
                 inventoryManager.addNoteEntry(interactableObject.gameObject.GetComponent<FPEAttachedNote>().collectNote());
             }

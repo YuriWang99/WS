@@ -27,6 +27,9 @@ public class ElevatorGameControl : MonoBehaviour
     [Header("Subtiles")]
     public GameObject SolveSecondPuzzle, SolveWholePuzzle;
 
+    //[Header("Subtiles")]
+    
+
 
     void Start()
     {
@@ -58,13 +61,13 @@ public class ElevatorGameControl : MonoBehaviour
 
                             Invoke("LightSequence1", 3f);
 
-                            Invoke("Demo2", 8f);
+                            Invoke("Demo2", 5f);
 
                         }
                         else
                         {
                             ClearSequence();
-                            Invoke("Demo1", 3f);
+                            //Invoke("Demo1", 3f);
                         }
                     }
                 }
@@ -86,11 +89,11 @@ public class ElevatorGameControl : MonoBehaviour
                             Invoke("LightSequence2", 3f);
 
                             SolveSecondPuzzle.SetActive(true);
-                            Invoke("Demo3", 8f);
+                            Invoke("Demo3", 5f);
                         }
                         else
                         {
-                            Invoke("Demo2", 5f);
+                            //Invoke("Demo2", 5f);
                             Debug.Log("Sequence2 false");
                             ClearSequence();
                         }
@@ -119,7 +122,7 @@ public class ElevatorGameControl : MonoBehaviour
                         }
                         else
                         {
-                            Invoke("Demo3", 5f);
+                            //Invoke("Demo3", 5f);
                             Debug.Log("Sequence3 false");
                             ClearSequence();
                         }
@@ -233,6 +236,23 @@ public class ElevatorGameControl : MonoBehaviour
         GCGate1.GetComponent<FPEAlwaysSwingOutDoor>().activateDoor();
         GCGate2.GetComponent<FPEAlwaysSwingOutDoor>().activateDoor();
 
+    }
+
+    public void ElevatorRest()
+    {
+        ClearSequence();
+        if (SequenceIndex==1)
+        {
+            Demo1();
+        }
+        else if(SequenceIndex==2)
+        {
+            Demo2();
+        }
+        else if (SequenceIndex == 3)
+        {
+            Demo3();
+        }
     }
 } 
 

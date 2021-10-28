@@ -197,10 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WalkSpeedCrouching: 2
-  m_RunSpeedCrouching: 4
-  m_WalkSpeedStanding: 4
-  m_RunSpeedStanding: 10
+  m_WalkSpeedCrouching: 1
+  m_RunSpeedCrouching: 1
+  m_WalkSpeedStanding: 3
+  m_RunSpeedStanding: 3
   walkStepLengthCrouching: 3.5
   runStepLengthCrouching: 3
   walkStepLengthStanding: 1

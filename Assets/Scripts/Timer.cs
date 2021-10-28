@@ -24,9 +24,12 @@ public class Timer : MonoBehaviour
     public AudioSource FifteenSeconds;
     public AudioSource Tenseconds;
     public AudioSource Passward;
+
+    public bool One30 = true, One15=true, One10=true, One0=true;
     void Start()
     {
         TimerTextPro.text = timeStart.ToString("00:00");
+        FortyFiveSeconds.Play();
         inLibrary = true;
     }
 
@@ -38,45 +41,72 @@ public class Timer : MonoBehaviour
             //720 24h »»Ëã 30s = 1h 30s = 60min 1s = 2 min
             timeStart -= Time.deltaTime;
             TimerTextPro.text = timeStart.ToString("00.00");// Timer font 00:00
-            if(timeStart>44)
+            if (timeStart >30&& timeStart < 31)
             {
-                once = false;
-                FortyFiveSeconds.Play();
+                play30();
             }
-            else if (timeStart >30)
+            if (timeStart > 15 && timeStart < 16)
             {
-                once = false;
-                ThirtySeconds.Play();
+                play15();
             }
-            else if (timeStart < 15 && once)
-            {
-                once = false;
-                FifteenSeconds.Play();
-            }
-            else if (timeStart < 10 && once)
+            if (timeStart > 10 && timeStart < 11)
             {
                 once = false;
                 TenSecondsLeft.SetActive(true);
-                Tenseconds.Play();
+                play10();
             }
-
             if (timeStart<0)
             {
                 timeStart = 0;
                 TimerTextPro.text = "00.00";
                 inLibrary = false;
-                Passward.Play();
+
                 StartCoroutine(PlayText());
             }
-
         }
-
-
     }
 
     IEnumerator PlayText()
     {
         yield return new WaitForSeconds(3f);
         TimeUpText.SetActive(true);
+        yield return new WaitForSeconds(15f);
+        play0();
+    }
+    void play30()
+    {
+        if (One30)
+        {
+            ThirtySeconds.Play();
+            One30 = false;
+        }
+
+    }
+    void play15()
+    {
+        if (One15)
+        {
+            FifteenSeconds.Play();
+            One15 = false;
+        }
+
+    }
+    void play10()
+    {
+        if (One10)
+        {
+            Tenseconds.Play();
+            One10 = false;
+        }
+
+    }
+    void play0()
+    {
+        if (One0)
+        {
+            Passward.Play();
+            One0 = false;
+        }
+
     }
 }

@@ -50,22 +50,24 @@ public class DialogueSystem : MonoBehaviour
     void Update()
     {
 
-
         if (DisplayText && index >= textList.Count && textFinished)
             {
                 index = 0;
                 textFinished = false;
-            SubtitleController.GetComponent<SubtitleController>().hasSubtitle = false;
-            DisplayText = false;
+                SubtitleController.GetComponent<SubtitleController>().hasSubtitle = false;
+                DisplayText = false;
+
+            //Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = false;
             this.gameObject.SetActive(false);
 
             }
             if (DisplayText && textFinished)
             {
-                
-                /*textLabel.text = textList[index];
-                index++;*/
-                StartCoroutine(SetTextUI());
+            //Cursor.lockState = CursorLockMode.Locked;
+            /*textLabel.text = textList[index];
+            index++;*/
+            StartCoroutine(SetTextUI());
             }
 
     }
