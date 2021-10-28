@@ -14,7 +14,7 @@ public class SubTitleSystem : MonoBehaviour
     public AudioSource BGM;
     public AudioSource PipeBGM;
     [Header("Part1")]
-    public GameObject Ele_Door_Light;
+    //public GameObject Ele_Door_Light;
     public GameObject Ele_Door_Trigger;
     public GameObject[] Floors;
     public AudioSource ElevatorOpen;
@@ -106,7 +106,7 @@ public class SubTitleSystem : MonoBehaviour
         //BGM.Play();
         SubTitle.color = Color.yellow;
         yield return new WaitForSeconds(2);
-        Ele_Door_Light.SetActive(true);
+        //Ele_Door_Light.SetActive(true);
         yield return new WaitForSeconds(2);
         CurrentFloor = 1;
         yield return new WaitForSeconds(4);
