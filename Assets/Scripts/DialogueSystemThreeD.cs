@@ -30,10 +30,10 @@ public class DialogueSystemThreeD : MonoBehaviour
     {
         /*textLabel.text = textList[index];
         index++;*/
-        //StartCoroutine(SetTextUI());
+        StartCoroutine(SetTextUI());
 
         //writing.Play();
-        if (!SubtitleController.GetComponent<SubtitleController>().hasSubtitle)
+/*        if (!SubtitleController.GetComponent<SubtitleController>().hasSubtitle)
         {
             DisplayText = true;
             SubtitleController.GetComponent<SubtitleController>().hasSubtitle = true;
@@ -42,14 +42,14 @@ public class DialogueSystemThreeD : MonoBehaviour
         else
         {
             this.gameObject.SetActive(false);
-        }
+        }*/
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (DisplayText && index >= textList.Count && textFinished)
+        if (index >= textList.Count && textFinished)
         {
             index = 0;
             textFinished = false;
@@ -61,7 +61,7 @@ public class DialogueSystemThreeD : MonoBehaviour
             this.gameObject.SetActive(false);
 
         }
-        if (DisplayText && textFinished)
+        if (textFinished)
         {
             //Cursor.lockState = CursorLockMode.Locked;
             /*textLabel.text = textList[index];
