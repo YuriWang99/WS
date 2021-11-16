@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
-  brightness: 0.75
+  brightness: 1.9
   mainTex: {fileID: 2800000, guid: 21e254ab4724da1429576c9e045ce231, type: 3}
   layout: 0
   layoutColumns: 1
@@ -285,7 +285,7 @@ MonoBehaviour:
   seed: 160
   radius: 1000
   squash: 0
-  starCount: 20000
+  starCount: 19317
   starColors:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0.18620682, a: 1}
@@ -315,9 +315,9 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  starRadiusMin: 0.69
-  starRadiusMax: 11.92
-  starRadiusBias: 13.42
+  starRadiusMin: 0.87
+  starRadiusMax: 14.3
+  starRadiusBias: 30.4
   powerRgb: 1
   clampSize: 1
   clampSizeMin: 7
@@ -640,6 +640,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4cfcfa7c46ffc954d86fb86fc0796b27, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
